@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entry Feedback</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}"/>
+    <script type="text/javascript" src="{% static 'js/alert.js' %}"></script>
+</head>
+<header>
+    <h1 class="gradient-text">MoodAF</h1>
+  </header>
+  <link href="https://fonts.googleapis.com/css?family=Archivo+Black&display=swap" rel="stylesheet">
+
+<body>
+    <div>
+        <h3>Your Entry Summary and Recommendations: </h3>
+        <br>
+        <textarea  class="textbox" id="entryBox" name="entryBox" rows="15" cols="101" class="textbox" readonly>
+        {{ feedback }}
+        
+    </textarea>
+    </div>
+    <p>
+        <input type="button" id='share' name="share" value = "Share This Entry with a Medical Professional" class="button-34" onClick="confirm( 'Entry Sent to Medical Professional' )">
+    
+    </p>
+
+    <form>
+        {% csrf_token %}
+        <!-- alert on click -->
+        <br><br>
+        
+        
+        
+    </form>
+    <form method="POST" action="/viewEntries/">
+        {% csrf_token %}<p>
+        <a href="http://127.0.0.1:8000/form/"><input type="button" name="submit" value = "Add Another Entry" class="button-34"></a>    
+        <a href="http://127.0.0.1:8000/"><input type="button" name="logout" value = "Logout" class="button-34"></a>
+        <button type="submit" class="button-34">View All My Entries</button> </p>
+    </form>
+</body>
+<footer class="footer-distributed">
+  <div class="footer-right">
+
+    <form action="/community/" method="POST">
+      {% csrf_token %}
+      <button type="submit" class="button-34">Check Out Our Community</button>
+    </form>
+
+  </div>
+  <br>
+  Listen to some music<br>
+  <audio src="{% static 'music.mp3' %}" controls loop></audio> 
+    <div class="footer-left">
+      <p class="footer-links">
+        <a href="#"> Home </a>
+        <a href="#"> New Entry </a>
+        <a href="#"> Logout </a>
+        <a href="#"> About </a>
+      </p>
+    </div>
+  </footer>
+</html>

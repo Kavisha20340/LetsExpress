@@ -1,0 +1,325 @@
+body {
+    background-color: #ffffe3;
+  }
+
+/* header {
+padding: 60px;
+background: #f1ecf8;
+color: white;
+} */
+
+p{  font-family: "Archivo Black", sans-serif;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 18px;}
+
+.p1{  font-family: "Archivo Black", sans-serif;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 18px;
+  color: #628c98; 
+}
+
+.gradient-text {
+/* Fallback: Set a background color. */
+background-color: #CA4246;
+
+/* Create the gradient. */
+    background-image: linear-gradient(
+        45deg,
+        #CA4246 16.666%, 
+        #E16541 16.666%, 
+        #E16541 33.333%, 
+        #F18F43 33.333%, 
+        #F18F43 50%, 
+        #8B9862 50%, 
+        #8B9862 66.666%, 
+        #476098 66.666%, 
+        #476098 83.333%, 
+        #A7489B 83.333%);
+
+/* Set the background size and repeat properties. */
+background-size: 100%;
+background-repeat: repeat;
+
+/* Use the text as a mask for the background. */
+/* This will show the gradient as a text color rather than element bg. */
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent; 
+
+/* Animate the text when loading the element. */
+    /* This animates it on page load and when hovering out. */
+    animation: rainbow-text-simple-animation-rev 0.75s ease forwards;
+
+}
+
+.gradient-text:hover{
+    animation: rainbow-text-simple-animation 0.5s ease-in forwards;
+}
+
+
+/* Move the background and make it smaller. */
+/* Animation shown when entering the page and after the hover animation. */
+@keyframes rainbow-text-simple-animation-rev {
+    0% {
+        background-size: 650%;
+    }
+    40% {
+        background-size: 650%;
+    }
+    100% {
+        background-size: 100%;
+    }
+}
+
+/* Move the background and make it larger. */
+/* Animation shown when hovering over the text. */
+@keyframes rainbow-text-simple-animation {
+    0% {
+        background-size: 100%;
+    }
+    80% {
+        background-size: 650%;
+    }
+    100% {
+        background-size: 650%;
+    }
+}
+
+
+
+
+header {
+margin-top: 0em;
+/* margin-top: calc(50vh - 3em); */
+}
+
+h1 {
+font-family: "Archivo Black", sans-serif;
+font-weight: normal;
+font-size: 6em;
+text-align: center;
+margin-bottom: 0;
+margin-bottom: 0em;
+display: block;
+margin-left: auto;
+margin-right: auto;
+cursor: pointer;
+width: 605px;}
+
+h3 {
+    font-family: "Archivo Black", sans-serif;
+    font-weight: normal;
+    color: #476098;
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 0;
+    margin-bottom: 0em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    width: 700px;}
+
+h2 {
+  font-family: "Archivo Black", sans-serif;
+  font-weight: normal;
+  color: #CA4246;
+  font-size: 1.5em;
+  text-align: center;
+  /* margin-bottom: 0;
+  margin-bottom: 0em; */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+  /* width: 605px; */
+}
+
+
+/* CSS */
+.button-34 {
+  background-color: #c2fbd7;
+  border-radius: 100px;
+  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+  color: green;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Archivo Black", sans-serif;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-34:hover {
+  box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
+}
+
+
+
+
+/* Styling the textbox */
+.textbox {
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    font-family: "Archivo Black", sans-serif;
+    font-size: 18px;
+    padding: 5px;
+    
+  }
+  
+  /* Styling the textbox on focus */
+  .textbox:focus {
+    outline: none;
+    border-color: #6c63ff;
+    box-shadow: 0 0 5px #6c63ff;
+  }
+  
+  /* Styling the label above the textbox */
+  .label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: block;
+  }
+
+/* Float four columns side by side */
+.column {
+float: left;
+width: 100%;
+padding: 50 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 20 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+.column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+}
+}
+
+/* Style the counter cards */
+.card {
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+padding: 16px;
+text-align: center;
+background-color: #f1f1f1;
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+
+* {
+  font-family: "Archivo Black", sans-serif;
+}
+
+footer {
+  width: 100%;
+  display: inline-block;
+  background: #ccc;
+  height: 30vh;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: underline;
+  position: absolute;
+  margin-top: 40px;
+}
+
+.footer-distributed {
+  background-color: #daecfd6c;
+  box-shadow: 0 1px 1px 0 rgba(230, 221, 255, 0.408);
+  box-sizing: border-box;
+  width: 100%;
+  position: sticky;
+  text-align: left;
+  font: normal 19px sans-serif;
+  /* padding: 45px 50px; */
+}
+
+.footer-distributed .footer-left p {
+  color: #8f9296;
+  font-size: 14px;
+  margin: 0;
+}
+/* Footer links */
+
+.footer-distributed p.footer-links {
+  font-size: 18px;
+  font-weight: bold;
+  color: #6d6d6d;
+  margin: 0 0 10px;
+  /* padding: 0; */
+  transition: ease .25s;
+}
+
+.footer-distributed p.footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: inherit;
+  transition: ease .25s;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "·";
+  font-size: 20px;
+  left: 0;
+  color: #6d6d6d;
+  display: inline-block;
+  /* padding-right: 5px; */
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+  .footer-distributed .footer-left p.footer-links {
+    line-height: 1.8;
+  }
+
+  .footer-distributed .footer-right {
+    float: right;
+    margin-top: 6px;
+    max-width: 180px;
+  }
+  
+  .footer-distributed .footer-right a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background-color: #33383b;
+    border-radius: 2px;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+    margin-left: 3px;
+    transition:all .25s;
+  }
+  
+  .footer-distributed .footer-right a:hover{transform:scale(1.1); -webkit-transform:scale(1.1);}
+  

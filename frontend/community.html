@@ -1,0 +1,55 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home Page</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}"/>
+    </head>
+    <header href="index.html">
+      
+      <h1 class="gradient-text">MoodAF</h1>
+    </header>
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black&display=swap" rel="stylesheet">
+
+<body>
+    <h3 >You are NOT Alone</h3>
+    <div class="card">
+    <h2>TODAY...</h2><p>
+    {% for key, value in allDayEntries.items %}
+        {{ value }}% of <span class="gradient-text">MoodAF </span>users share the feelings of {{ key }}
+        <br>
+        <br>
+    {% endfor %}
+   <p style="color: #CA4246"><span style="color:black">Mental Health Tip of the Day: </span>{{ finalFeedback }}</p>
+  </p></div>
+    <p>
+        <a href="http://127.0.0.1:8000/form/"><input type="button" name="submit" value = "Add a New Entry" class="button-34"></a>
+        <a href="http://127.0.0.1:8000/"><input type="button" name="home" value = "Home" class="button-34"></a>
+        </p>
+</body>
+<footer class="footer-distributed">
+    <div class="footer-right">
+  
+      <form action="/community/" method="POST">
+        {% csrf_token %}
+        <button type="submit" class="button-34">Check Out Our Community</button>
+      </form>
+  
+    </div>
+    <div class="footer-left">
+      <br>
+      Listen to some music<br>
+      <audio src="{% static 'music.mp3' %}" controls loop></audio> 
+      <p class="footer-links">
+        <a href="#"> Home </a>
+        <a href="#"> New Entry </a>
+        <a href="#"> About </a>
+  
+      </p>
+    </div>
+  </footer>
+</html>

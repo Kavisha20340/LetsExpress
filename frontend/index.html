@@ -1,0 +1,65 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}"/>
+</head>
+<header href="index.html">
+  
+  <h1 class="gradient-text">MoodAF</h1>
+</header>
+<link href="https://fonts.googleapis.com/css?family=Archivo+Black&display=swap" rel="stylesheet">
+
+<body>            
+  <div class="card">
+      <form action="/form/" method="POST">
+        {% csrf_token %}
+           <p>Write a    <button type="submit" class="button-34">New Entry</button></p>
+      </form>
+      <h3>OR</h3> <br>
+      <form action="/summary/" method="POST">
+        {% csrf_token %}
+
+
+        <p>Login to View Old Entries: <br><br>
+          <label for="fname">First Name</label>
+          <input type="text"  class="textbox" placeholder="Enter First Name" name="fname" required>
+          <br>
+          <br>
+          <label for="lname"><b>Last Name</b></label>
+         
+          <input type="text" class="textbox" placeholder="Enter Last Name" name="lname" required>
+          <br>
+          <br>
+          <a href="summary.html"><button type="submit" name="submit" class="button-34">View Entries</button></a>
+        </p>
+            </div>
+      </form>
+</body>
+
+<footer class="footer-distributed">
+  <div class="footer-right">
+
+    <form action="/community/" method="POST">
+      {% csrf_token %}
+      <button type="submit" class="button-34">Check Out Our Community</button>
+    </form>
+
+  </div>
+  <div class="footer-left">
+    <br>
+    Listen to some music<br>
+    <audio src="{% static 'music.mp3' %}" controls loop></audio> 
+    <p class="footer-links">
+      <a href="#"> Home </a>
+      <a href="#"> New Entry </a>
+      <a href="#"> About </a>
+    </p>
+  </div>
+</footer>
+</html>
