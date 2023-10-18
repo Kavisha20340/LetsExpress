@@ -2,7 +2,7 @@
 
 LetsExpress is an innovative solution that uses Cohere Classify and Generate API to create a safe space for individuals to share their experiences and emotions through journaling, with the goal of reducing stigma and improving understanding.
 
-## Ojective
+## Objective
 The primary objective of this endeavor is to establish a space for people to express their feelings and experiences via journaling, with the ultimate aim of diminishing prejudice and enhancing comprehension.
 
 ## Interface
